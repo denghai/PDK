@@ -1,0 +1,135 @@
+ <root>
+	<LoadSkin Skin="GamePDK/xml/GamePrivateSkin.xml"/>
+	<Widget Name="PrivateDismissPlane" SkinTempName="Empty">
+		<Property Key="Pos" Value="640 360"/>
+		<Widget SkinTempName="BtnFullEmpty">
+		</Widget>
+		<Widget Name="" SkinTempName="public_9sprite">
+			<Property Key="Size" Value="600 450"/>
+		</Widget>
+		<Widget Name="" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="40"/>
+			<Property Key="ShowTxt" Value="房间解散"/>
+			<Property Key="Pos" Value="0 180"/>
+		</Widget>
+		
+		<Widget Name="DissPrivateName0" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="名字名:"/>
+			<Property Key="Pos" Value="-10 80"/>
+			<Property Key="AnchorPos" Value="1 0.5"/>
+			<Property Key="Color" Value="255 0 0"/>
+		</Widget>
+		<Widget Name="DissPrivateState0" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="名字名字"/>
+			<UserInfo Key="Text0" Value="同意"/>
+			<UserInfo Key="Text1" Value="拒绝"/>
+			<Property Key="Pos" Value="10 80"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+			<Property Key="Color" Value="255 0 0"/>
+		</Widget>
+		<Widget Name="DissPrivateName1" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="名字:"/>
+			<Property Key="Color" Value="255 0 0"/>
+			<Property Key="Pos" Value="-10 40"/>
+			<Property Key="AnchorPos" Value="1 0.5"/>
+		</Widget>
+		<Widget Name="DissPrivateState1" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="同意"/>
+			<UserInfo Key="Text0" Value="同意"/>
+			<UserInfo Key="Text1" Value="拒绝"/>
+			<Property Key="Pos" Value="10 40"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+			<Property Key="Color" Value="255 0 0"/>
+		</Widget>
+		<Widget Name="DissPrivateName2" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="名字:"/>
+			<Property Key="Color" Value="255 0 0"/>
+			<Property Key="Pos" Value="-10 0"/>
+			<Property Key="AnchorPos" Value="1 0.5"/>
+		</Widget>
+		<Widget Name="DissPrivateState2" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="同意"/>
+			<UserInfo Key="Text0" Value="同意"/>
+			<UserInfo Key="Text1" Value="拒绝"/>
+			<Property Key="Pos" Value="10 0"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+			<Property Key="Color" Value="255 0 0"/>
+		</Widget>
+		
+        <Widget Name="" SkinTempName="TxtEmpty">
+            <Property Key="FontSize" Value="28"/>
+            <Property Key="ShowTxt" Value="5分钟没有确认,系统默认自动解散"/>
+            <Property Key="Pos" Value="205 -170"/>
+            <Property Key="AnchorPos" Value="1 0.5"/>
+            <Property Key="Color" Value="255 0 0"/>
+        </Widget>
+        
+		<Widget Name="PrivateDismissAction" SkinTempName="Empty">
+			<Widget Name="Button_DismissPrivate" SkinTempName="ButtonTxtEmpty">
+				<Property Key="PressTexture" Value="AutoPress"/>
+				<Property Key="Pos" Value="-120 -120"/>
+				<Property Key="FontSize" Value="40"/>
+				<Property Key="ShowTxt" Value="同意解散"/>
+			</Widget>
+			<Widget Name="Button_DismissPrivateNot" SkinTempName="ButtonTxtEmpty">
+				<Property Key="PressTexture" Value="AutoPress"/>
+				<Property Key="Pos" Value="120 -120"/>
+				<Property Key="FontSize" Value="40"/>
+				<Property Key="ShowTxt" Value="拒绝解散"/>
+			</Widget>
+		</Widget>
+	</Widget>
+	<Widget Name="PrivateEndPlane" SkinTempName="Empty">
+		<Property Key="Pos" Value="640 350"/>
+		<Property Key="Visible" Value="false"/>
+		<Widget SkinTempName="BtnFullEmpty">
+		</Widget>
+        
+        <Widget SkinTempName="public_9sprite">
+           <Property Key="ImagicTexture" Value="GamePDK/GameResoultBack.png"/>
+           <Property Key="Size" Value="1250 720"/>
+        </Widget>
+        
+        <Widget Name="PrivateEndPlane_GameExit" SkinTempName="ButtonEmpty">
+            <Property Key="NomalTexture" Value="public/Button_Close.png"/>
+            <Property Key="PressTexture" Value="AutoPress"/>
+            <Property Key="Pos" Value="590 320"/>
+        </Widget>
+        
+        <Widget Name="" SkinTempName="ImagicEmpty">
+            <Property Key="ImagicTexture" Value="GamePDK/ScencePrivate/gameover.png"/>
+            <Property Key="Pos" Value="0 310"/>
+        </Widget>
+        
+		<Widget Name="PrivateEndPlayer0" SkinTempName="NNPrivateEndPlayerInfo">
+			<Property Key="Pos" Value="-100 -10"/>
+		</Widget>
+		<Widget Name="PrivateEndPlayer1" SkinTempName="NNPrivateEndPlayerInfo">
+			<Property Key="Pos" Value="300 -10"/>
+		</Widget>
+		<Widget Name="PrivateEndPlayer2" SkinTempName="NNPrivateEndPlayerInfo">
+			<Property Key="Pos" Value="700 -10"/>
+		</Widget>
+		<Widget Name="Button_PrivateAgagin" SkinTempName="ButtonTxtEmpty">
+			<Property Key="PressTexture" Value="AutoPress"/>
+			<Property Key="Pos" Value="500 -290"/>
+			<Property Key="FontSize" Value="35"/>
+			<Property Key="ShowTxt" Value="再来一局"/>
+            <Property Key="Visible" Value="false"/>
+			<Action Key="Hide" Value="PrivateEndPlane"/>
+		</Widget>
+        
+        <Widget Name="NNButton_PrivateWeiXinShare" SkinTempName="ButtonEmpty">
+            <Property Key="NomalTexture" Value="GamePDK/ScencePrivate/share.png"/>
+            <Property Key="PressTexture" Value="AutoPress"/>
+            <Property Key="Pos" Value="50 -290"/>
+        </Widget>
+	</Widget>
+	
+ </root>

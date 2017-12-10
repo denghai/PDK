@@ -1,0 +1,5 @@
+﻿ <root>
+	<MoveWidget Name="PrivateEndPlane">
+		<ChildProperty Name="Button_PrivateAgagin" Key="Visible" Value="false"/>
+	</MoveWidget>
+ </root>

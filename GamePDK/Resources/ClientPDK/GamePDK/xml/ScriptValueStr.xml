@@ -1,0 +1,27 @@
+﻿ <root>
+
+	<ScriptValueStr Key="SureDismissPrivate" Value="你确定要解散房间吗？"/>
+	
+	<ScriptValueStr Key="NNBuQiang" Value="不抢"/>
+	<ScriptValueStr Key="NNResoultYou" Value="有牛"/>
+	<ScriptValueStr Key="NNResoultWu" Value="没牛"/>
+	
+    
+    <ScriptValueStr Key="GameTalkTxt0" Value="你太牛了"/>
+    <ScriptValueStr Key="GameTalkTxt1" Value="哈哈，手气真好"/>
+    <ScriptValueStr Key="GameTalkTxt2" Value="快点出牌噢"/>
+    <ScriptValueStr Key="GameTalkTxt3" Value="今天真高兴"/>
+    <ScriptValueStr Key="GameTalkTxt4" Value="这个吃的好"/>
+    <ScriptValueStr Key="GameTalkTxt5" Value="怎么又断线了啊，网络怎么这么差啊"/>
+    <ScriptValueStr Key="GameTalkTxt6" Value="你家里是开银行的吧"/>
+    <ScriptValueStr Key="GameTalkTxt7" Value="不好意思，我有事先走一步了"/>
+    <ScriptValueStr Key="GameTalkTxt8" Value="你的牌打的太好了"/>
+    <ScriptValueStr Key="GameTalkTxt9" Value="大家好，很高兴见到各位"/>
+    
+    
+    <ScriptValueStr Key="NNPrivateTxt1" Value="房号:#，#，#，看谁跑得快-跑得快，速度来啊！"/>
+    <ScriptValueStr Key="NNPrivateTxt2" Value="我在[看谁跑得快]玩跑得快，速度来啊！"/>
+	<ScriptValueStr Key="NNWeiXinSharTitle" Value="看谁跑得快"/>
+	<ScriptValueStr Key="NNWeiXinSharUrl" Value="http://fir.im/nzxd"/>
+ </root>
+ 

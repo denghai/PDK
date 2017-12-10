@@ -1,0 +1,69 @@
+﻿ <root>
+	<WidgetNode Name="NNPrivateEndPlayerInfo" >
+		<Widget9Sprite Name="public_9sprite" BackTexture="GamePDK/ScencePrivate/over_jieshuUI.png" Size="350 450">
+            <Property Key="Pos" Value="-300 20"/>
+		</Widget9Sprite>
+        <WidgetImagic Name="HeadImagicEmpty" TextureInfo="GamePDK/waibiankuang3.png">
+            <Property Key="Pos" Value="-400 180"/>
+            <Property Key="Scale" Value="0.9"/>
+        </WidgetImagic>
+        <WidgetImagic Name="Head" TextureInfo="Head/Head0.png">
+			<Property Key="Pos" Value="-400 180"/>
+			<Property Key="Scale" Value="0.9"/>
+		</WidgetImagic>
+		<WidgetTxt Name="Name" ShowTxt="玩家昵称" FontName="" FontSize="28">
+			<Property Key="Pos" Value="-320 200"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+			<Property Key="OutLine" Value="0 0 0 0"/>
+		</WidgetTxt>
+		<WidgetTxt Name="" ShowTxt="ID:" FontName="" FontSize="28">
+			<Property Key="Pos" Value="-320 170"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+		</WidgetTxt>
+		<WidgetTxt Name="ID" ShowTxt="1546800000" FontName="" FontSize="28">
+			<Property Key="Pos" Value="-280 170"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+		</WidgetTxt>
+        
+        <WidgetImagic Name="HeadImagicEmpty" TextureInfo="GamePDK/ScencePrivate/singlescore.png">
+            <Property Key="Pos" Value="-300 60"/>
+            <Property Key="Scale" Value="0.9"/>
+        </WidgetImagic>
+        <WidgetTxt Name="singlesocre" ShowTxt="100" FontName="" FontSize="32">
+            <Property Key="Pos" Value="-225 60"/>
+            <Property Key="Color" Value="255 255 255"/>
+            <Property Key="AnchorPos" Value="0 0.5"/>
+        </WidgetTxt>
+        
+        <WidgetImagic Name="HeadImagicEmpty" TextureInfo="GamePDK/ScencePrivate/boomnum.png">
+            <Property Key="Pos" Value="-300 -10"/>
+            <Property Key="Scale" Value="0.9"/>
+        </WidgetImagic>
+        <WidgetTxt Name="boomnum" ShowTxt="100" FontName="" FontSize="32">
+            <Property Key="Pos" Value="-225 -9"/>
+            <Property Key="Color" Value="255 255 255"/>
+            <Property Key="AnchorPos" Value="0 0.5"/>
+        </WidgetTxt>
+        
+        <WidgetImagic Name="HeadImagicEmpty" TextureInfo="GamePDK/ScencePrivate/winlose.png">
+            <Property Key="Pos" Value="-300 -80"/>
+            <Property Key="Scale" Value="0.9"/>
+        </WidgetImagic>
+        
+        <WidgetTxt Name="winlose" ShowTxt="100" FontName="" FontSize="32">
+            <Property Key="Pos" Value="-225 -78"/>
+            <Property Key="Color" Value="255 255 255"/>
+            <Property Key="AnchorPos" Value="0 0.5"/>
+        </WidgetTxt>
+        
+        <WidgetImagic Name="HeadImagicEmpty" TextureInfo="GamePDK/ScencePrivate/totalscore.png">
+            <Property Key="Pos" Value="-300 -150"/>
+            <Property Key="Scale" Value="0.9"/>
+        </WidgetImagic>
+		<WidgetTxt Name="TotalScore" ShowTxt="100" FontName="" FontSize="36">
+			<Property Key="Pos" Value="-225 -147"/>
+			<Property Key="Color" Value="255 255 255"/>
+			<Property Key="AnchorPos" Value="0 0.5"/>
+		</WidgetTxt>
+	</WidgetNode>
+ </root>

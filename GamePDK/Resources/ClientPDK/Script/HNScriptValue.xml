@@ -1,0 +1,15 @@
+ <root>
+	<ScriptValueFloat Key="UseWidth" Value="1280"/>
+	<ScriptValueFloat Key="UseHeight" Value="720"/>
+	
+	<ScriptValueStr Key="address" Value="119.23.152.128"/>
+	<ScriptValueInt Key="Port" Value="8300"/>
+	<ScriptValueStr Key="Host" Value=""/><!--120.25.243.77  123.57.77.152 Script/HNSetScence.xml-->
+	<ScriptValueStr Key="PCImei" Value="17"/>
+	
+	<ScriptValueStr Key="UITest" Value=""/>
+	<ScriptValueInt Key="UITestMaskAple" Value="150"/>
+	
+	<ScriptValueInt Key="GameType" Value="1"/>
+	
+ </root>

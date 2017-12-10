@@ -1,0 +1,430 @@
+ <root>
+ 
+	<WidgetButton Name="NNButtonTxtEmpty" NomalTexture="public/Button_Public.png" PressTexture="AutoPress">
+		<Property Key="FontSize" Value="30"/>
+	</WidgetButton>
+	
+	<WidgetTxtAtlas Name="NNTxtAtlaBei" Texture="GamePDK/room63_n.png" ShowTxt="0" Width="19" Height="29" StartChar="48">
+			<Property Key="AnchorPos" Value="1 0.5"/>
+	</WidgetTxtAtlas>
+	
+	<WidgetTxtAtlas Name="PDKTxtAtlasWin" Texture="GamePDK/room66_n.png" ShowTxt="0" Width="63" Height="93" StartChar="43">
+			<Property Key="AnchorPos" Value="0.5 0.5"/>
+	</WidgetTxtAtlas>
+	
+	<WidgetTxtAtlas Name="PDKTxtAtlaLose" Texture="GamePDK/room66_s.png" ShowTxt="0" Width="63" Height="93" StartChar="43">
+			<Property Key="AnchorPos" Value="0.5 0.5"/>
+	</WidgetTxtAtlas>
+	<!--玩家头像-->
+	<WidgetNode Name="PDK_PLAYER_HEAD" >
+		
+		<WidgetImagic Name="HeadImagicEmpty" TextureInfo="GamePDK/HeadImagic.png">
+			<Property Key="Pos" Value="-0.5 -40"/>
+			<Property Key="Visible" Value="false"/>
+		</WidgetImagic>
+		<WidgetImagic Name="HeadImagic" TextureInfo="Head/Head0.png">
+			<Property Key="Pos" Value="0 -40"/>
+		</WidgetImagic>
+		<WidgetButton Name="ButtonPlayerHeadClick" NomalTexture="GamePDK/waibiankuang3.png" PressTexture="AutoPress">
+			<Property Key="Pos" Value="0 -40"/>
+		</WidgetButton>
+		<WidgetImagic Name="Offline" TextureInfo="GamePDK/off_line_sign.png">
+			<Property Key="Pos" Value="45 10"/>
+			<Property Key="Visible" Value="false"/>
+		</WidgetImagic>
+        
+        <WidgetImagic Name="BaoDan" TextureInfo="GamePDK/alarm1.png">
+            <Property Key="Pos" Value="45 10"/>
+            <Property Key="Visible" Value="false"/>
+        </WidgetImagic>
+        
+        <WidgetImagic Name="FangZhu" TextureInfo="GamePDK/fangzhu.png">
+			<Property Key="Pos" Value="45 10"/>
+			<Property Key="Visible" Value="true"/>
+		</WidgetImagic>
+		<WidgetTxt Name="Name" ShowTxt="名字" FontName="" FontSize="30">
+			<Property Key="Pos" Value="0 50"/>
+		</WidgetTxt>
+		<WidgetImagic Name="GoldImagic" TextureInfo="GamePDK/GoldBack.png">
+			<Property Key="Pos" Value="0 -115"/>
+			<WidgetTxt Name="GoldTxt" ShowTxt="100" FontName="" FontSize="30">
+				<Property Key="Pos" Value="77 17"/>
+			</WidgetTxt>
+		</WidgetImagic>
+		
+        <WidgetImagic Name="TalkFile" TextureInfo="GamePDK/Talk/play_shenying.png">
+            <Property Key="Pos" Value="0 70"/>
+            <Property Key="Visible" Value="false"/>
+            <EmptyAction Name="Start" SaveAction="true">
+                <Visible Visible="true"/>
+                <CallAction OtherNodeName="TalkPic1" OtherActionName="Start">
+                    <CallAction OtherNodeName="TalkPic2" OtherActionName="Start">
+                    </CallAction>
+                </CallAction>
+                <WaiteTime Time="3.0" >
+                    <Visible Visible="false"/>
+                </WaiteTime>
+            </EmptyAction>
+            <WidgetImagic Name="TalkPic1" TextureInfo="GamePDK/Talk/play_shengyin1.png">
+                <Property Key="Pos" Value="35 18"/>
+                <EmptyAction Name="Start" SaveAction="true">
+                    <Visible Visible="true" Name="Start1">
+                        <WaiteTime Time="0.6" >
+                            <Visible Visible="false">
+                                <WaiteTime Time="0.3" >
+                                    <CallAction SelfActionName="Start1">
+                                    </CallAction>
+                                </WaiteTime>
+                            </Visible>
+                        </WaiteTime>
+                    </Visible>
+                    <WaiteTime Time="3" >
+                        <StopAllAction >
+                        </StopAllAction>
+                    </WaiteTime>
+                </EmptyAction>
+            </WidgetImagic>
+            <WidgetImagic Name="TalkPic2" TextureInfo="GamePDK/Talk/play_shengyin2.png">
+                <Property Key="Pos" Value="45 18"/>
+                <EmptyAction Name="Start" SaveAction="true">
+                    <Visible Visible="false" Name="Start1" SaveAction="">
+                        <WaiteTime Time="0.3" >
+                            <Visible Visible="true">
+                                <WaiteTime Time="0.3" >
+                                    <Visible Visible="false">
+                                        <WaiteTime Time="0.3" >
+                                            <CallAction SelfActionName="Start1">
+                                            </CallAction>
+                                        </WaiteTime>
+                                    </Visible>
+                                </WaiteTime>
+                            </Visible>
+                        </WaiteTime>
+                    </Visible>
+                    <WaiteTime Time="3" >
+                        <StopAllAction >
+                        </StopAllAction>
+                    </WaiteTime>
+                </EmptyAction>
+            </WidgetImagic>
+        </WidgetImagic>
+        
+        <WidgetNode Name="TalkTxtNode">
+            <Property Key="Visible" Value="false"/>
+            <Widget9Sprite Name="public_9sprite" BackTexture="GamePDK/msg_bubble_btm.png" Size="300 60">
+                <Property Key="InsetsRect" Value="35 46 5 5"/>
+            </Widget9Sprite>
+            <WidgetLayout Name="LayoutNode">
+                <Property Key="ClippingEnabled" Value="true"/>
+                <Property Key="Size" Value="280 50"/>
+                <Property Key="Pos" Value="0 10"/>
+                <Property Key="HideBack"/>
+                <Property Key="AnchorPos" Value="0.5 0.5"/>
+                <WidgetNode Name="">
+                    <Property Key="Pos" Value="5 20"/>
+                    <WidgetTxt Name="TalkTxt" ShowTxt="1000" FontName="" FontSize="35">
+                        <Property Key="ShowTxt" Value="TalkTxt"/>
+                        <Property Key="AnchorPos" Value="0 0.5"/>
+                        <Property Key="Color" Value="137 53 25"/>
+                    </WidgetTxt>
+                </WidgetNode>
+            </WidgetLayout>
+        </WidgetNode>
+        
+        <WidgetNode Name="BiaoQingNode">
+            <Property Key="Visible" Value="false"/>
+            <WidgetImagic Name="BiaoQingPic" TextureInfo="GamePDK/Talk/EE5.png">
+            </WidgetImagic>
+        </WidgetNode>
+        
+        <WidgetTxtAtlas Name="AddGoldTxtWin" Texture="GamePDK/room66_n.png" ShowTxt="0" Width="63" Height="93" StartChar="43">
+			<Property Key="AnchorPos" Value="0.5 0.5"/>
+			<Property Key="Visible" Value="false"/>
+			<Visible Visible="true" Name="Start" SaveAction="true">
+				<WaiteTime Time="4" >
+					<Visible Visible="false">
+					</Visible>
+				</WaiteTime>
+				<SetPos Pos="0 0">
+				</SetPos>
+				<MoveTo Time="0.5" Pos="0 60">
+				</MoveTo>
+			</Visible>
+			
+		</WidgetTxtAtlas>
+		
+		<WidgetTxtAtlas Name="AddGoldTxtLose" Texture="GamePDK/room66_s.png" ShowTxt="0" Width="63" Height="93" StartChar="43">
+			<Property Key="AnchorPos" Value="0.5 0.5"/>
+			<Property Key="Visible" Value="false"/>
+			<Visible Visible="true" Name="Start" SaveAction="true">
+				<WaiteTime Time="4" >
+					<Visible Visible="false">
+					</Visible>
+				</WaiteTime>
+				<SetPos Pos="0 0">
+				</SetPos>
+				<MoveTo Time="0.5" Pos="0 60">
+				</MoveTo>
+			</Visible>
+		</WidgetTxtAtlas>
+		
+	</WidgetNode>
+	
+	<WidgetNode Name="PDK_PlayerStatusNode">
+		<WidgetImagic Name="ReadyState" TextureInfo="GamePDK/Status_Ready.png">
+			<UserInfo Key="Ready" Value="GamePDK/Status_Ready.png"/>
+		</WidgetImagic>
+		<WidgetImagic Name="EffectImagic" TextureInfo="GamePDK/Status_Ready.png">
+			<UserInfo Key="Hu" Value="GamePDK/Effect_Hu.png"/>
+			<Property Key="Visible" Value="false"/>
+			<Visible Visible="true" Name="Start" SaveAction="true">
+				<WaiteTime Time="4" >
+					<Visible Visible="false">
+					</Visible>
+				</WaiteTime>
+			</Visible>
+		</WidgetImagic>
+	</WidgetNode>
+	
+	<WidgetNode Name="PDK_PlayerClock">
+		<WidgetImagic Name="" TextureInfo="GamePDK/RoomClock1.png">
+			<Property Key="Scale" Value="1.2"/>
+		</WidgetImagic>
+		<WidgetTxt Name="ClockTime" ShowTxt="10" FontName="" FontSize="50">
+			<Property Key="Pos" Value="0 -6"/>
+			<Property Key="Color" Value="255 50 50"/>
+		</WidgetTxt>
+	</WidgetNode>
+	
+	<WidgetImagic Name="PDK_PlayerPass" TextureInfo="GamePDK/yaobuqi.png">
+		<Property Key="Visible" Value="false"/>
+		<Visible Visible="true" Name="Start" SaveAction="true">
+			<SetScale Scale="0.2" />
+			<SetAple Aple="0.2" />
+			<ScaleTo Time="0.5" Scale="1">
+			</ScaleTo>
+			<ApleTo Time="0.5" Aple="1" >
+			</ApleTo>
+		</Visible>
+	</WidgetImagic>
+	
+	<WidgetImagic Name="PDK_MeiYou" TextureInfo="GamePDK/meiyoudapai.png">
+		<Property Key="Visible" Value="false"/>
+		<Visible Visible="true" Name="Start" SaveAction="true">
+			<SetAple Aple="0.2" />
+			<ApleTo Time="0.5" Aple="1" >
+				<WaiteTime Time="1.5" >
+					<Visible Visible="false">
+					</Visible>
+				</WaiteTime>
+			</ApleTo>
+		</Visible>
+	</WidgetImagic>
+	
+
+	<WidgetNode Name="OutCardNodeOther">
+		<Property Key="Visible" Value="false"/>
+		<Visible Visible="true"Name="OutCardAni" SaveAction="true">
+			<SetScale Scale="0.1" />
+			<SetAple Aple="0.2" />
+			<SetPos Pos="Key:OutFromPos" />
+			<ScaleTo Time="0.2" Scale="0.6">
+			</ScaleTo>
+			<ApleTo Time="0.2" Aple="1" >
+			</ApleTo>
+			<MoveTo Time="0.2" Pos="Key:OutToPos" >
+			</MoveTo>
+		</Visible>
+	</WidgetNode>
+	
+	
+	<WidgetNode Name="HandCardNodeSelf">
+		<WaiteTime  Time="0.2"  Name="Start" SaveAction="true">
+			<CallButton ButtonName="PDKButton_RefreshHandCard">
+			</CallButton>
+		</WaiteTime>
+	</WidgetNode>
+	
+	<WidgetNode Name="JieSuanNodeScale">
+		<SetScale Scale="0" Name="ShowAni" SaveAction="">
+			<ScaleTo Time="0.2" Scale="1">
+				<WaiteTime Time="3" SaveAction="true">
+					<Visible Visible="false"/>
+				</WaiteTime>
+			</ScaleTo>
+		</SetScale>
+	</WidgetNode>
+	
+	<!--牌背-->
+	<WidgetImagic Name="PDK_CardBack_Big" TextureInfo="GamePDK/card/poker_bg_back_big.png">
+	</WidgetImagic>
+
+    <!--报单-->
+    <WidgetImagic Name="PDK_baodan" TextureInfo="GamePDK/alarm1.png">
+    </WidgetImagic>
+    
+	<WidgetImagic Name="PDK_CardBack" TextureInfo="GamePDK/card/poker_bg_back.png">
+	</WidgetImagic>
+	
+	<!--牌-->
+	<WidgetNode Name="PDK_PlayerCard">
+		<UserInfo Key="CardImgPath" Value="GamePDK/card/"/>
+		<UserInfo Key="CardBackFile" Value="GamePDK/card/poker_bg_back_big.png"/>
+		
+		<WidgetImagic Name="CardShow" TextureInfo="GamePDK/card/poker_bg_big.png">			
+			
+			<WidgetImagic Name="Card_Number1" TextureInfo="GamePDK/card/red_3_big.png">
+				<Property Key="Pos" Value="28 138"/>
+			</WidgetImagic>
+			
+			<WidgetImagic Name="Card_Color1" TextureInfo="GamePDK/card/color_2.png">
+				<Property Key="Pos" Value="28 96"/>
+			</WidgetImagic>
+			
+			<WidgetImagic Name="Card_Number2" TextureInfo="GamePDK/card/red_3_big.png">
+				<Property Key="Pos" Value="97 36"/>
+				<Property Key="Rotation" Value="180"/>
+			</WidgetImagic>
+			
+			<WidgetImagic Name="Card_Color2" TextureInfo="GamePDK/card/color_2.png">
+				<Property Key="Pos" Value="97 84"/>
+				<Property Key="Rotation" Value="180"/>
+			</WidgetImagic>
+			
+			<WidgetImagic Name="Card_BigImg" TextureInfo="GamePDK/card/red_p11_big.png">
+				<Property Key="Pos" Value="63 88"/>
+				<Property Key="Visible" Value="true"/>
+			</WidgetImagic>
+	
+		</WidgetImagic>
+		
+		<WidgetImagic Name="CardBack" TextureInfo="GamePDK/card/poker_bg_back_big.png">
+			<Property Key="Visible" Value="false"/>
+		</WidgetImagic>
+		
+		
+		<Visible Visible="true"Name="OutCardAni" SaveAction="true">
+			<ScaleTo Time="0.2" Scale="0.8">
+			</ScaleTo>
+			<MoveTo Time="0.2" Pos="Key:OutToPos" >
+				<Visible Visible="false"/>
+			</MoveTo>
+		</Visible>
+		
+		<Visible Name="OutAction"  Visible="false" SaveAction="true">
+			<WaiteTime Time="0.2" >
+				<Visible Visible="true"/>
+			</WaiteTime>
+		</Visible>
+		
+	</WidgetNode>
+	
+	<WidgetNodeUI Name="PDKGameResoultNode">
+		<Property Key="Size" Value="900 80"/>
+		<WidgetTxt Name="Name" ShowTxt="就看见就看见" FontName="" FontSize="30">
+			<Property Key="Pos" Value="100 25"/>
+			<Property Key="Color" Value="70 20 20"/>
+		</WidgetTxt>
+		<WidgetTxt Name="LeftNum" ShowTxt="10" FontName="" FontSize="35">
+			<Property Key="Pos" Value="350 25"/>
+			<Property Key="Color" Value="70 20 20"/>
+		</WidgetTxt>
+		
+		<WidgetTxt Name="BombNum" ShowTxt="10" FontName="" FontSize="35">
+			<Property Key="Pos" Value="590 25"/>
+			<Property Key="Color" Value="70 20 20"/>
+		</WidgetTxt>
+		
+		<WidgetTxt Name="GoldTxt" ShowTxt="-1000" FontName="" FontSize="35">
+			<Property Key="Pos" Value="840 25"/>
+			<Property Key="Color" Value="200 20 20"/>
+		</WidgetTxt>
+	</WidgetNodeUI>
+
+	
+	<WidgetAnimation Name="LianDuiAni" PlistFile="" ImgFile="">
+		<Property Key="Visible" Value="true"/>
+		<Property Key="runFrames" Value="GamePDK/ani/Animation_DoubleLine:1:13:.png"/>
+		<Property Key="Time" Value="0.15"/>
+		<Property Key="Loop" Value="false"/>
+		<Property Key="Scale" Value="0.8"/>
+	</WidgetAnimation>
+	
+	
+	<WidgetNode Name="FeiJiAni">
+		<Property Key="Pos" Value="0 -100"/>
+		<EmptyAction Name="PopOpenLight" SaveAction="">
+			<CallAction OtherNodeName="PlaneEffect" OtherActionName="PopOpenLight" >
+			</CallAction>
+			<Visible Visible="true">
+			</Visible>
+			<WaiteTime Time="1.3" >
+				<Visible Visible="false">
+				</Visible>
+			</WaiteTime>
+		</EmptyAction>
+		<WidgetImagic Name="PlaneEffect" TextureInfo="GamePDK/ani/Animation_Aircraft2.png">
+			<EmptyAction Name="PopOpenLight" SaveAction="true">
+				<SetScale Scale="0">
+				</SetScale>
+				<ScaleTo Time="0.7" Scale="0.7">
+				</ScaleTo>
+				<SetPos Pos="400 400">
+				</SetPos>
+				<MoveTo Time="0.7" Pos="0 0">
+					<SetScale Scale="0.7">
+					</SetScale>
+					<ScaleTo Time="0.5" Scale="1">
+					</ScaleTo>
+					<SetImage ImageFile="GamePDK/ani/Animation_Aircraft3.png">
+						<MoveTo Time="0.5" Pos="-100 150">
+						</MoveTo>
+					</SetImage>
+				</MoveTo>
+			</EmptyAction>	
+		</WidgetImagic>
+	</WidgetNode>
+
+	<WidgetNode Name="BombAni">
+		<WidgetImagic Name="" TextureInfo="GamePDK/ani/Animation_Missile.png">
+			<Visible Visible="true"Name="" SaveAction="">
+				<SetAple Aple="1" />
+				<SetPos Pos="200 200" />
+				<MoveTo Time="0.4" Pos="0 0">
+					<ApleTo Time="0.1" Aple="0" >
+					</ApleTo>
+				</MoveTo>
+			</Visible>
+		</WidgetImagic>
+		
+		<WidgetAnimation Name="BombAni" PlistFile="" ImgFile="">
+			<Property Key="Visible" Value="true"/>
+			<Property Key="runFrames" Value="GamePDK/ani/Animation_MissileBomb:1:6:.png"/>
+			<Property Key="Time" Value="0.2"/>
+			<Property Key="Loop" Value="false"/>
+			<Property Key="DelayTime" Value="0.3"/>
+		</WidgetAnimation>
+	</WidgetNode>
+	
+	<WidgetNode Name="ShunZiAni">
+		<WidgetAnimation Name="ShunZiAni" PlistFile="" ImgFile="">
+			<Property Key="Visible" Value="true"/>
+			<Property Key="runFrames" Value="GamePDK/ani/Animation_DragonBoat:1:17:.png"/>
+			<Property Key="Time" Value="0.1"/>
+			<Property Key="Loop" Value="false"/>
+		</WidgetAnimation>
+	
+		<WidgetImagic Name="" TextureInfo="GamePDK/ani/Animation_OneLine.png">
+			<Property Key="Pos" Value="-100 0"/>
+			<Visible Visible="true"Name="" SaveAction="">
+				<SetAple Aple="0.0" />
+				<ApleTo Time="0.8" Aple="1" >
+					<WaiteTime Time="1" >
+						<ApleTo Time="0.5" Aple="0" >
+						</ApleTo>
+					</WaiteTime>
+				</ApleTo>
+			</Visible>
+		</WidgetImagic>
+	</WidgetNode>
+ </root>

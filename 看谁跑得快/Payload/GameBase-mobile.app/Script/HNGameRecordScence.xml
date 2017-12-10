@@ -1,0 +1,222 @@
+﻿ <root>
+	<LoadSkin Skin="Script/HNGameRecordSkin.xml"/>
+    <LoadSkin Skin="GamePDK/xml/GameSkin.xml"/>
+	<Widget Name="GameRecordScencePlane" SkinTempName="Empty">
+		<Property Key="Pos" Value="640 360"/>
+		<Widget SkinTempName="BtnFullEmpty">
+		</Widget>
+		<Widget Name="" SkinTempName="ImagicEmpty">
+			<Property Key="ImagicTexture" Value="ScenceGameRecord/public_bg.png"/>
+		</Widget>
+		<Widget Name="Button_GameRecordBack" SkinTempName="Button_Back">
+			<Property Key="Pos" Value="-580 310"/>
+		</Widget>
+		<Widget Name="" SkinTempName="ImagicEmpty">
+			<Property Key="ImagicTexture" Value="ScenceGameRecord/hist_rec_title_bg_1.png"/>
+			<Property Key="Pos" Value="0 310"/>
+		</Widget>
+		<Widget Name="" SkinTempName="TxtEmpty">
+			<Property Key="FontSize" Value="32"/>
+			<Property Key="ShowTxt" Value="游戏记录"/>
+			<Property Key="Pos" Value="0 310"/>
+		</Widget>
+		<Widget Name="RecordListPlane" SkinTempName="Empty">
+			<Property Key="Visible" Value="false"/>
+			<Widget Name="" SkinTempName="public_9sprite">
+				<Property Key="ImagicTexture" Value="public/9Scale2.png"/>
+				<Property Key="Size" Value="1150 560"/>
+				<Property Key="Pos" Value="0 -50"/>
+			</Widget>
+			<Widget Name="" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="32"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="结果"/>
+				<Property Key="Pos" Value="-480 190"/>
+			</Widget>
+			<Widget Name="" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="32"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="房间号"/>
+				<Property Key="Pos" Value="-330 190"/>
+			</Widget>
+			<Widget Name="" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="32"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="分数"/>
+				<Property Key="Pos" Value="-0 190"/>
+			</Widget>
+			<Widget Name="" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="32"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="时间"/>
+				<Property Key="Pos" Value="400 190"/>
+			</Widget>
+			<Widget Name="RecordList0" SkinTempName="List">
+				<Property Key="Size" Value="1180 480"/>
+				<Property Key="Pos" Value="-590 -320"/>
+				<Property Key="HideBack" Value="false"/>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+				<Widget Name="" SkinTempName="GameReocrdListItem">
+				</Widget>
+			</Widget>
+		</Widget>
+	
+		<Widget Name="RecordTotalPlane" SkinTempName="Empty">
+			<Widget Name="" SkinTempName="public_9sprite">
+				<Property Key="ImagicTexture" Value="public/9Scale2.png"/>
+				<Property Key="Size" Value="1150 560"/>
+				<Property Key="Pos" Value="0 -50"/>
+			</Widget>
+			<Widget Name="" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="30"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="序号"/>
+				<Property Key="Pos" Value="-500 190"/>
+			</Widget>
+			<Widget Name="" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="30"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="开始时间"/>
+				<Property Key="Pos" Value="-330 190"/>
+			</Widget>
+			<Widget Name="PlayerName0" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="30"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="分数"/>
+				<Property Key="Pos" Value="-150 190"/>
+			</Widget>
+			<Widget Name="PlayerName1" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="30"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="分数"/>
+				<Property Key="Pos" Value="10 190"/>
+			</Widget>
+			<Widget Name="PlayerName2" SkinTempName="TxtEmpty">
+				<Property Key="FontSize" Value="30"/>
+				<Property Key="Color" Value="250 0 0"/>
+				<Property Key="ShowTxt" Value="分数"/>
+				<Property Key="Pos" Value="170 190"/>
+			</Widget>
+            
+			<Widget Name="RecordList1" SkinTempName="List">
+				<Property Key="Size" Value="1180 480"/>
+				<Property Key="Pos" Value="-590 -320"/>
+				<Property Key="HideBack" Value="false"/>
+			</Widget>
+		</Widget>
+        
+        
+        
+        <Widget Name="showCardPlane" SkinTempName="Empty">
+            <Property Key="Visible" Value="false"/>
+            <Widget  SkinTempName="BtnFullEmpty">
+                <Action Key="Hide" Value="showCardPlane"/>
+            </Widget>
+            <Widget  SkinTempName="public_9sprite">
+                <Property Key="Size" Value="800 650"/>
+                <Property Key="Pos" Value="0 0"/>
+            </Widget>
+            <Widget Name="" SkinTempName="TxtEmpty">
+                <Property Key="FontSize" Value="46"/>
+                <Property Key="ShowTxt" Value="查牌"/>
+                <Property Key="Pos" Value="0 290"/>
+                <Property Key="OutLine" Value="250 250 250 250:1"/>
+            </Widget>
+            
+            <Widget Name="Card0" SkinTempName="Empty">
+                <Property Key="Pos" Value="0 125"/>
+                
+                <Widget Name="userName" SkinTempName="TxtEmpty">
+                    <Property Key="FontSize" Value="35"/>
+                    <Property Key="ShowTxt" Value=" "/>
+                    <Property Key="Pos" Value="0 85"/>
+                    <Property Key="Color" Value="0 0 0"/>
+                </Widget>
+                
+                <Widget Name="CardNodeHand" SkinTempName="Empty">
+                    <Property Key="Pos" Value="0 0"/>
+                </Widget>
+                <Widget Name="CardNodeOut" SkinTempName="OutCardNodeOther">
+                    <UserInfo Key="OderAdd" Value="1"/>
+                    <UserInfo Key="AddPosX" Value="60"/>
+                    <UserInfo Key="CardWidth" Value="145"/>
+                    
+                    <Property Key="Scale" Value="0.7"/>
+                    <Property Key="Pos" Value="0 0"/>
+                    <UserInfo Key="OutFromPos" Value="0 0"/>
+                    <UserInfo Key="OutToPos" Value="0 0"/>
+                    <UserInfo Key="CardScale" Value="1"/>
+                </Widget>
+            </Widget>
+            
+            
+            
+            <Widget Name="Card1" SkinTempName="Empty">
+                <Property Key="Pos" Value="0 -60"/>
+                
+                <Widget Name="userName" SkinTempName="TxtEmpty">
+                    <Property Key="ShowTxt" Value=" "/>
+                    <Property Key="FontSize" Value="35"/>
+                    <Property Key="Pos" Value="0 85"/>
+                    <Property Key="Color" Value="0 0 0"/>
+                </Widget>
+                
+                <Widget Name="CardNodeHand" SkinTempName="Empty">
+                    <Property Key="Pos" Value="0 0"/>
+                </Widget>
+                <Widget Name="CardNodeOut" SkinTempName="OutCardNodeOther">
+                    <UserInfo Key="OderAdd" Value="1"/>
+                    <UserInfo Key="AddPosX" Value="60"/>
+                    <UserInfo Key="CardWidth" Value="145"/>
+                    
+                    <Property Key="Scale" Value="0.7"/>
+                    <Property Key="Pos" Value="0 0"/>
+                    <UserInfo Key="OutFromPos" Value="0 0"/>
+                    <UserInfo Key="OutToPos" Value="0 0"/>
+                    <UserInfo Key="CardScale" Value="1"/>
+                </Widget>
+            </Widget>
+            
+            
+            <Widget Name="Card2" SkinTempName="Empty">
+                <Property Key="Pos" Value="0 -235"/>
+                
+                <Widget Name="userName" SkinTempName="TxtEmpty">
+                    <Property Key="ShowTxt" Value=" "/>
+                    <Property Key="FontSize" Value="35"/>
+                    <Property Key="Pos" Value="0 80"/>
+                    <Property Key="Color" Value="0 0 0"/>
+                </Widget>
+                
+                <Widget Name="CardNodeHand" SkinTempName="Empty">
+                    <Property Key="Pos" Value="0 0"/>
+                </Widget>
+                <Widget Name="CardNodeOut" SkinTempName="OutCardNodeOther">
+                    <UserInfo Key="OderAdd" Value="1"/>
+                    <UserInfo Key="AddPosX" Value="60"/>
+                    <UserInfo Key="CardWidth" Value="145"/>
+                    
+                    <Property Key="Scale" Value="0.7"/>
+                    <Property Key="Pos" Value="0 0"/>
+                    <UserInfo Key="OutFromPos" Value="0 0"/>
+                    <UserInfo Key="OutToPos" Value="0 0"/>
+                    <UserInfo Key="CardScale" Value="1"/>
+                </Widget>
+            </Widget>
+
+        </Widget>
+    </Widget>
+ </root>
